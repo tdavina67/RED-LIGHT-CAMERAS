@@ -1,8 +1,7 @@
 //******************************************************************************
-// PROGRAM : PROJECT 4 - RED LIGHT CAMERAS
+// PROGRAM : RED LIGHT CAMERAS
 // COURSE : CS 141 - PROGRAM DESIGN II
 // DAVINA TITUS 
-// UIN : 652284919 
 // DATE : 2ND APRIL 2025
 
 // DESCRIPTION :
