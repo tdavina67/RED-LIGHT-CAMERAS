@@ -1,53 +1,65 @@
-Overview
-This project analyzes red light camera violation data using C++. It reads structured data from a file, aggregates statistics, and outputs findings on violations, 
-neighborhoods, cameras, and monthly trends.​
+# Red Light Cameras — Chicago Violation Analysis 🚦
 
-Features
-Reads red light camera violation records from a data file
+A C++ data analysis tool that processes real red light camera 
+violation data from the City of Chicago, aggregating statistics 
+and surfacing insights across neighborhoods, intersections, 
+and time periods.
 
-Aggregates statistics for total violations and unique cameras
+## Overview
+Chicago's red light camera network generates thousands of violation 
+records across the city. This program reads that structured dataset, 
+processes it efficiently in C++, and produces meaningful analysis — 
+from which neighborhoods have the highest violations to monthly 
+trend charts — all from the command line.
 
-Reports neighborhood-level violation counts and camera distributions
+## Features
+- Parses and processes large CSV-formatted violation datasets
+- Aggregates total violations and unique camera counts city-wide
+- Reports neighborhood-level violation counts and camera distributions
+- Generates ASCII bar charts of monthly violation trends
+- Search by intersection name or neighborhood
+- Clean menu-driven console interface
 
-Generates monthly charts (bar graph in text format) of violations
+## Sample Output
+```
+Monthly Violations (Bar Chart):
+Jan |████████████| 1,204
+Feb |█████████| 934
+Mar |███████████████| 1,502
+...
 
-Provides search capability by intersection or neighborhood
+Top Neighborhoods by Violations:
+1. Austin          - 3,241 violations
+2. Humboldt Park   - 2,876 violations
+3. West Englewood  - 2,104 violations
+```
 
-Getting Started
-Prerequisites
-C++ compiler (e.g., g++, clang++)
+## Concepts Demonstrated
+- File I/O and CSV parsing in C++
+- Data aggregation with maps and vectors
+- Sorting and ranking algorithms
+- String search and filtering
+- Console data visualization (ASCII charts)
+- Menu-driven program architecture
 
-Standard C++ libraries
+## Data Format
+Each record contains:
+```
+intersection, address, camera_number, date, violations, neighborhood
+```
 
-Data file formatted with intersections, addresses, dates, camera numbers, violations, and neighborhoods
+## How to Run
+```bash
+git clone https://github.com/davina-titus/RED-LIGHT-CAMERAS.git
+cd RED-LIGHT-CAMERAS
+g++ -o redlightcameras main.cpp
+./redlightcameras
+```
+Then follow the on-screen prompts to load the data file and explore.
 
-Installation
-Clone the repository:
+## Language
+- **C++**
 
-git clone https://github.com/tdavina67/RED-LIGHT-CAMERAS.git
-Compile the program:
+---
+*Data sourced from the City of Chicago Open Data Portal*  
 
-g++ -o red_light_cameras main.cpp
-Usage
-Run the program in your terminal/console:
-
-./red_light_cameras
-Follow on-screen prompts to enter the data file name and select menu options.
-
-Example Data File
-Each line contains:
-
-intersection,address,camNum,date,violations,neighborhood
-Project Structure
-main.cpp: Source code for processing, analyzing, and displaying red light camera data
-
-Data file: Expects a CSV-formatted text file
-
-License
-This project is released under the MIT License.
-
-Author
-Davina Titus
-University of Illinois at Chicago
-CS 141 - Program Design II
-April 2025
